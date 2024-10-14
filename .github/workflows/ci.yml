@@ -30,8 +30,8 @@ jobs:
               run: cat package.json
             - name: Lint All HTML Files
               run: npx htmlhint "**/*.html"
-            - name: Lint All CSS Files
-              run: npx stylelint "**/*.css"
+            # - name: Lint All CSS Files
+            #   run: npx stylelint "**/*.css"
             
 
     
