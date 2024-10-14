@@ -36,8 +36,4 @@ jobs:
             - name: Check Working Directory
               run: echo "${{github.workspace}}"
             - name: Check Working Directory Contents
-              run: ls -a
-                
-            
-
-    
+              run: ls -a  
