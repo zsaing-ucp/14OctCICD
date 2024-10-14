@@ -33,7 +33,7 @@ jobs:
             # - name: Lint All CSS Files
             #   run: npx stylelint "**/*.css"
             # Following Two steps are for testing Purpose
-            - name: Check Working Directory Contents
+            - name: Check Working Directory
               run: echo "${{github.workspace}}"
             - name: Check Working Directory Contents
               run: ls -a
