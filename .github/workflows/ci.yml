@@ -2,11 +2,12 @@ name: ci-workflow
 on:
     push: 
         branches: ['**']
-    pull_request: 
-        branches: 
-            - main
-        types: 
-            - opened
+    # Following will run whenever a new PR is Opened on Main Branch
+    # pull_request: 
+    #     branches: 
+    #         - main
+    #     types: 
+    #         - opened
 jobs:
     ci-job:
         runs-on: ubuntu-latest
@@ -20,5 +21,13 @@ jobs:
               run: echo ${{github.ref_name}}
             - name: Committer
               run: echo ${{github.actor}}
+            - name: Install HTMLHint
+              run: npm install --save-dev htmlhint
+            - name: Install Styleline
+              run: npm install --save-dev stylelint stylelint-config-standard
+            # Testing Purpose: Check Pacakge Json Contents
+            - name: Check Package.json
+              run: cat package.json
+            
 
     
